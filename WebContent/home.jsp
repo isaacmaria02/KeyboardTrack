@@ -5,16 +5,64 @@
    <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Typing Test</title>
 
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: DodgerBlue;
+  color: white;
+}
+
+h1{
+text-align:center;
+}
+
+boxsizingBorder {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+h2,p,span{
+color:white;}
+
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
 
 </head>
-<body>
+<body style=" background-color: orange;">
 
-<h1><time>00:00:00</time></h1>
+<h1>Stopwatch</h1>
+<h1 id="stpwtch"><time>00:00:00</time></h1>
 
 <script>
-var h1 = document.getElementsByTagName('h1')[0],
+var h1 = document.getElementById('stpwtch'),
 start = document.getElementById('start'),
 stop = document.getElementById('stop'),
 clear = document.getElementById('clear'),
@@ -47,24 +95,15 @@ timer();
 /* Start button */
 start.onclick = timer;
 
-/* Stop button */
-stop.onclick = function() {
-clearTimeout(t);
-}
 
-/* Clear button */
-clear.onclick = function() {
-h1.textContent = "00:00:00";
-seconds = 0; minutes = 0; hours = 0;
-}
 
 
 </script>
 
-<p >
+<h2  >
 Emotion is a mental state variously associated with thoughts feelings behavioural responses and a degree of pleasure or displeasure.
 
-</p>
+</h2>
 
 
 
@@ -72,9 +111,9 @@ Emotion is a mental state variously associated with thoughts feelings behavioura
 
 <form action="StoreInfo" id="usrform" method="post">
   <input type="hidden" id="secs" name="seconds">
-  <textarea rows="10" cols="150" name="test" form="usrform">
-</textarea>
-  <input type="submit" value="End Test">
+  <textarea style="align:center" class="boxsizingBorder" rows="10" cols="150" name="test" form="usrform" required>
+</textarea><br>
+  <input style="margin-left:50%;" class="button button1"  type="submit" value="End Test">
 </form>
 
 <div id="some_div">
